@@ -1,11 +1,14 @@
 import React from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+
 import HomeScreen from '../screens/HomeScreen';
 import DetailsScreen from '../screens/DetailsScreen';
 
+// Create a stack navigator
 const Stack = createStackNavigator();
 
+// Define the navigation structure
 const Navigation = () => {
   return (
     <NavigationContainer>
