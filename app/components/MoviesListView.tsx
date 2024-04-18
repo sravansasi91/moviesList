@@ -3,12 +3,12 @@ import {
   View,
   FlatList,
   StyleSheet,
-  Image,
   Dimensions,
   Text,
   TouchableOpacity,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+import FastImage from 'react-native-fast-image';
 
 // Define the interface
 interface IParams {
@@ -29,7 +29,7 @@ export const MoviesListView = ({itemList}: IParams) => {
     };
     return (
       <TouchableOpacity style={styles.cardStyle} onPress={handleItemPress}>
-        <Image
+        <FastImage
           style={styles.poster}
           source={{uri: item['#IMG_POSTER']}}
           resizeMode="cover"
