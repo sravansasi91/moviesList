@@ -1,5 +1,6 @@
 import React from 'react';
-import {View, Text, StyleSheet, Image, ScrollView} from 'react-native';
+import {View, Text, StyleSheet, ScrollView} from 'react-native';
+import FastImage from 'react-native-fast-image';
 
 const DetailsScreen = ({route}: any) => {
   // Extract the item data passed from the previous screen
@@ -7,7 +8,7 @@ const DetailsScreen = ({route}: any) => {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Image
+      <FastImage
         style={styles.poster}
         source={{uri: item['#IMG_POSTER']}}
         resizeMode="cover"
@@ -43,8 +44,8 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
   },
   poster: {
-    height: 250,
-    width: '100%',
+    height: '60%',
+    width: '60%',
   },
   heading: {
     fontWeight: 'bold',
